@@ -1,0 +1,53 @@
+openapi: '3.0.2'
+info:
+  title: Orange API Server
+  version: '1.0'
+  description: |-
+    API Server for Orange-Server Discord Bot.
+  contact:
+    email: iris.wind.code@gmail.com
+servers:
+  - url: http://localhost:8888/
+externalDocs:
+  description: git page
+  url: https://gitlab.com/Rim_Earthlights/zb-test-app
+tags:
+  - name: message
+    description: manage messages.
+paths:
+  /message:
+    post:
+      tags:
+        - "message"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: boolean
+                  message:
+                    type: object
+                    properties:
+                      channel:
+                        type: string
+                      ts:
+                        type: number
+                example:
+                  result: true
+                  message:
+                    channel: ABC123
+                    ts: 1677292485.348759
+        '500':
+          description: server error;
+components:
+  schemas:
+    success:
+      type: object
+      properties:
+        result:
+          type: boolean
+          example: true
