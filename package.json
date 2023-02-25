@@ -1,0 +1,39 @@
+{
+  "name": "zb-test-app",
+  "version": "1.0.0",
+  "description": "test slack bot app",
+  "main": "src/app.js",
+  "repository": "https://github.com/Rim-Earthlights/zb-test-app.git",
+  "author": "Rim Earthlights <iris.wind.code@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "dependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node-cron": "^3.0.7",
+    "@types/typescript": "^2.0.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "eslint": "^8.34.0",
+    "express": "^4.18.2",
+    "got": "^12.5.3",
+    "helmet": "^6.0.1",
+    "mariadb": "^3.1.0",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
+    "typeorm": "^0.3.12",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "yarn run eslint src/**/*.ts",
+    "dev": "yarn run nodemon",
+    "compile": "yarn run tsc",
+    "dist": "node dist/app.js"
+  }
+}
