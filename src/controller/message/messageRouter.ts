@@ -26,8 +26,8 @@ messageRouter.post('/message', async (req: Express.Request, res: Express.Respons
     });
 
     if (response.ok === false) {
-        res.status(500).send({ result: false });
+        res.status(500).send({ result: false, message: response.body });
         return;
     }
-    res.status(200).send({ result: true });
+    res.status(200).send({ result: true, message: response.body });
 });
